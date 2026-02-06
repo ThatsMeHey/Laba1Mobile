@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Григорий Ленцов</string>
+    <string name="title">Визитка</string>
+    <string name="app_name" translatable="false">Laba1</string>
+    <string name="nickname" translatable="false">\@Aokeem</string>
+    <string name="phoneNumber" translatable="false">+7 982 289 63 06</string>
+    <string name="email" translatable="false">\danilweatley@gmail.com</string>
+    <string name="group" translatable="false">Б23-191-1</string>
+</resources>
