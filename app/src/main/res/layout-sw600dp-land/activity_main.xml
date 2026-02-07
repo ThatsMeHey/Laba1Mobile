@@ -8,34 +8,28 @@
     android:fitsSystemWindows="true"
     android:id="@+id/main">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/topGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
-
     <ImageView
         android:id="@+id/myPhoto"
         style="@style/MyPhotoStyle"
         android:src="@drawable/my_photo"
-        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toStartOf="@id/emailText"/>
     <TextView
         android:id="@+id/name"
         style="@style/Name"
         android:text="@string/name"
         app:layout_constraintTop_toBottomOf="@id/myPhoto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="@id/myPhoto"
+        app:layout_constraintEnd_toEndOf="@id/myPhoto"/>
     <TextView
         android:id="@+id/title"
         style="@style/Title"
         android:text="@string/title"
         app:layout_constraintTop_toBottomOf="@id/name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="@id/myPhoto"
+        app:layout_constraintEnd_toEndOf="@id/myPhoto"/>
 
 
 
@@ -43,10 +37,11 @@
         android:id="@+id/graduationPic"
         style="@style/IconStyle"
         android:src="@drawable/graduation"
+        app:layout_constraintStart_toEndOf="@id/myPhoto"
         app:layout_constraintBottom_toTopOf="@id/phonePic"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/graduationText"
-        app:layout_constraintHorizontal_chainStyle="packed" />
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@id/myPhoto"/>
 
     <TextView
         android:id="@+id/graduationText"
@@ -62,8 +57,9 @@
         android:id="@+id/phonePic"
         style="@style/IconStyle"
         android:src="@drawable/phone"
+        app:layout_constraintTop_toBottomOf="@id/graduationPic"
         app:layout_constraintBottom_toTopOf="@id/telegramPic"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/myPhoto"
         app:layout_constraintEnd_toStartOf="@id/phoneText"
         app:layout_constraintHorizontal_chainStyle="packed"/>
     <TextView
@@ -80,8 +76,9 @@
         android:id="@+id/telegramPic"
         style="@style/IconStyle"
         android:src="@drawable/telegram_icon"
+        app:layout_constraintTop_toBottomOf="@id/phonePic"
         app:layout_constraintBottom_toTopOf="@id/emailPic"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/myPhoto"
         app:layout_constraintEnd_toStartOf="@id/telegramText"
         app:layout_constraintHorizontal_chainStyle="packed"/>
     <TextView
@@ -98,8 +95,9 @@
         android:id="@+id/emailPic"
         style="@style/IconStyle"
         android:src="@drawable/email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/telegramPic"
+        app:layout_constraintStart_toEndOf="@id/myPhoto"
+        app:layout_constraintBottom_toBottomOf="@id/myPhoto"
         app:layout_constraintEnd_toStartOf="@id/emailText"
         app:layout_constraintHorizontal_chainStyle="packed"/>
     <TextView
